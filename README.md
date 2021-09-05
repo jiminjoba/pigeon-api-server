@@ -8,7 +8,8 @@ Api messenger Pigeon
 
 # How to use
  1) clone project
- 2) open request.http
- 3) press "register"
- 4) if u want to see your user press "see your users"
- 5) if u want to login press "login"
+ 2) write in console "npm run dev"
+ 3) open request.http
+ 4) press "register"
+ 5) if u want to see your user press "see your users"
+ 6) if u want to login press "login"
