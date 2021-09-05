@@ -23,7 +23,6 @@ app.post('/login', async (req, res)=> {
             res.status(401).send("Login or password invalid ");
             return;
         }
-        //if (req.body.password !== userInDataBase.password){
         if (!await verifyPassword(req.body.password, userInDataBase.hashedPassword, userInDataBase.salt)){
             res.status(401).send("Login or password invalid 1 ");
             return;
@@ -72,7 +71,7 @@ app.get('/users', (req, res)=> {
 })
 
 // set-password
-// ищу юзера, если нашел, то меняю пароль, все catch переписать на cath(error)
+//in develop dont use
 app.post('/users/set-password', async (req,res)=>{
     try{
         console.log('set-password');
