@@ -13,5 +13,4 @@ Api messenger Pigeon
  4) press "register"
  5) if u want to see your user press "see your users"
  6) if u want to login press "login"
-
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Запись экрана 2021-09-05 в 21 36 02](https://user-images.githubusercontent.com/73400755/132137910-8f90ae50-c775-44b4-8f7c-ace1bce369be.gif)
