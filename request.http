@@ -9,7 +9,7 @@ POST http://localhost:4000/users
 Content-Type: application/json
 
 {
-  "name": "Daniil2",
+  "name": "Daniil",
   "password": "palka-kopalka"
 }
 
@@ -19,7 +19,7 @@ POST http://localhost:4000/login
 Content-Type: application/json
 
 {
-  "name": "Daniil2",
+  "name": "Daniil",
   "password": "palka-kopalka"
 }
 

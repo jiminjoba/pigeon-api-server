@@ -1,13 +1,9 @@
-//import { Choose } from "./input.js";
-
 import { createRequire } from "module";
 import { verifyPassword, bcryptPassword } from "./hashed.js";
 
 const require = createRequire(import.meta.url);
 const express = require('express');
 const app = express();
-
-//Choose();
 
 const users = [];
 
