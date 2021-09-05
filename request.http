@@ -1,0 +1,34 @@
+
+
+###
+GET http://localhost:4000/users
+
+###
+//register 
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+  "name": "Daniil2",
+  "password": "palka-kopalka"
+}
+
+###
+//login
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "name": "Daniil2",
+  "password": "palka234"
+}
+
+###
+//set-password
+POST http://localhost:4000/users/set-password
+Content-Type: application/json
+
+{
+  "name": "Daniil2",
+  "password": "palka234"
+}
