@@ -11,11 +11,8 @@ const genSalt = async () => {
 
 const bcryptPassword = async (pass) => {
     let salt = await genSalt();
-    console.log("salt")
     const hasedPassword = await bcrypt.hash(pass, salt);
     let hash = hasedPassword;
-    console.log(salt);
-    console.log(hash);
     return {hash, salt};
 } 
 

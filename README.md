@@ -15,4 +15,4 @@ Api messenger Pigeon
  6) if u want to login press "login"
 
 
-![Запись экрана 2021-09-05 в 21 36 02](https://user-images.githubusercontent.com/73400755/132137910-8f90ae50-c775-44b4-8f7c-ace1bce369be.gif)
+![registration](https://user-images.githubusercontent.com/73400755/132139531-c24141df-d5f9-4a67-8933-4168e4ffa379.gif)
