@@ -9,8 +9,8 @@ POST http://localhost:4000/users
 Content-Type: application/json
 
 {
-  "name": "Daniil",
-  "password": "palka-kopalka"
+  "name": "Zlata",
+  "password": "Hello_world"
 }
 
 ###
@@ -19,8 +19,8 @@ POST http://localhost:4000/login
 Content-Type: application/json
 
 {
-  "name": "Daniil",
-  "password": "palka-kopalka"
+  "name": "Zlata",
+  "password": "palka-kopalka2334"
 }
 
 ###
@@ -30,6 +30,7 @@ POST http://localhost:4000/users/set-password
 Content-Type: application/json
 
 {
-  "name": "Daniil2",
-  "password": "palka234"
+  "name": "Zlata",
+  "currentPassword": "Hello_world",
+  "password": "palka-kopalka2334"
 }
