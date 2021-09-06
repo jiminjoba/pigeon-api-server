@@ -1,5 +1,5 @@
 import { createRequire } from "module";
-import { verifyPassword, bcryptPassword } from "./hashed.js";
+import { verifyPassword, bcryptPassword} from "./hashed.js";
 
 const require = createRequire(import.meta.url);
 const express = require('express');
@@ -24,12 +24,13 @@ app.post('/login', async (req, res)=> {
             return;
         }
         res.json(userInDataBase);
-    }catch{
+    }catch(error){
+        console.log(error);
         res.status(500).send();
     }
 })
 
-//find user
+// find user
 function findUser(userName){
     const user = users.find(user => user.name === userName);
     return user;
@@ -44,7 +45,7 @@ app.post('/users',async (req,res)=> {
             res.status(400).send("User already exist ");
             return;
         }
-        let hash =  await bcryptPassword(req.body.password);
+        let hash =  await bcryptPassword(req.body.password, req.body.salt);
         console.log(hash);
         const user = {
             name: req.body.name, 
@@ -67,7 +68,6 @@ app.get('/users', (req, res)=> {
 })
 
 // set-password
-//in develop dont use
 app.post('/users/set-password', async (req,res)=>{
     try{
         console.log('set-password');
@@ -76,11 +76,11 @@ app.post('/users/set-password', async (req,res)=>{
             res.status(400).send("Cant find ");
             return;
         }
+// проверить пароль и если он = curentPassword то поменять пароль
         userInDataBase.password = req.body.password;
-        console.log(userInDataBase.password);
-        let userName = req.body.name;
-        userInDataBase.password = req.body.password;
-        console.log(userName, userInDataBase.password);
+        let newHash = await bcryptPassword(userInDataBase.password, userInDataBase.salt);
+        userInDataBase.hashedPassword = newHash.hash;
+        userInDataBase.salt = newHash.salt;
     }catch(error){
         console.log(error);
         res.status(500).send();
