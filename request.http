@@ -1,0 +1,36 @@
+
+
+###
+GET http://localhost:4000/users
+
+###
+//register 
+POST http://localhost:4000/users
+Content-Type: application/json
+
+{
+  "name": "Zlata",
+  "password": "Hello_world"
+}
+
+###
+//login
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "name": "Zlata",
+  "password": "Hello_world"
+}
+
+###
+//in develop dont use
+//set-password
+POST http://localhost:4000/users/set-password
+Content-Type: application/json
+
+{
+  "name": "Zlata",
+  "currentPassword": "palka-kopalka",
+  "password": "palka-kopalka23"
+}
