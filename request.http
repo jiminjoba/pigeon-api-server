@@ -31,6 +31,6 @@ Content-Type: application/json
 
 {
   "name": "Zlata",
-  "currentPassword": "palka-kopalka",
+  "currentPassword": "Hello_world",
   "password": "palka-kopalka23"
 }

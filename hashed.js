@@ -4,24 +4,30 @@ const require = createRequire(import.meta.url);
 const bcrypt = require('bcrypt');
 
 
-const genSalt = async () => {
+const genSalt = async () => 
+{
     let salt = await bcrypt.genSalt(10);
     return salt;
 }
 
-const bcryptPassword = async (pass) => {
+const bcryptPassword = async (pass) => 
+{
     let salt = await genSalt();
     const hasedPassword = await bcrypt.hash(pass, salt);
     let hash = hasedPassword;
     return {hash, salt};
 } 
 
-const verifyPassword = async (pass,hash,salt) => {
+const verifyPassword = async (pass,hash,salt) => 
+{
     const hasedPassword = await bcrypt.hash(pass, salt);
-    if (hash === hasedPassword ){
+    if (hash === hasedPassword )
+    {
         console.log("True");
         return true;
-    }else{
+    }
+    else
+    {
         console.log("False");
         return false;
     }
